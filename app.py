@@ -36,7 +36,7 @@ if submit and user_input.strip():
     with st.spinner("Detective is piecing together the clues..."):
         try:
             # Use Gemini 1.5 Flash (fast and generative)
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-pro")
 
             full_prompt = f"{persona_prompt}\n\nUser's Case: {user_input}\n\nDetective's Report:"
             response = model.generate_content(full_prompt)
